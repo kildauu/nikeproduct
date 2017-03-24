@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nike Product</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body class="violet-bg">
+	<main class="nike--violet">
+		<nav class="navigation">
+			<a href="#" class="navigation__logo">
+				<img src="img/logo.png" class="navigation_logo-img">
+			</a>
+			<ul class="navigation__menu">
+				<li class="navigation__menu-item">
+					<a href="#" class="navigation__menu-link">LIFESTYLE</a>
+				</li>
+				<li class="navigation__menu-item">
+					<a href="#" class="navigation__menu-link">RUNNING</a>
+				</li>
+				<li class="navigation__menu-item">
+					<a href="#" class="navigation__menu-link">FOOTBALL</a>
+				</li>
+				<li class="navigation__menu-item">
+					<a href="#" class="navigation__menu-link">SKATEBOARDING</a>
+				</li>
+			</ul>
+			<div class="dropdown">
+				<span class="dropdown__toggle">
+					<i class="thumb"></i>
+					<i class="thumb"></i>
+					<i class="thumb"></i>
+				</span>
+				<ul class="dropdown__menu">
+					<li>item</li>
+					<li>item</li>
+					<li>item</li>
+				</ul>
+			</div>
+		</nav>
+		<section class="content">
+			<div class="goods__content">
+
+				<div class="goods__preview" data-model="huarache">
+					<div class="goods__slider">
+						<form action="">
+							<ul>
+								<li>
+									<input id="slide_1" type="radio" name="slide" checked>
+									<img src="img/img_h.jpg" class="goods__slide__preview">
+								</li>						
+								<li>
+									<input id="slide_2" type="radio" name="slide">		
+									<img src="img/img_h2.jpg" class="goods__slide__preview">
+								</li>
+								<li>
+									<input id="slide_3" type="radio" name="slide">
+									<img src="img/img_h3.jpg" class="goods__slide__preview">
+								</li>
+							</ul>
+						</form>
+						<div class="goods__slider-control">
+							<label for="slide_1" class="goods__slide-item active">
+								<img src="img/img_h.jpg">
+							</label>
+							<label for="slide_2" class="goods__slide-item">
+								<img src="img/img_h2.jpg">
+							</label>
+							<label for="slide_3" class="goods__slide-item">
+								<img src="img/img_h3.jpg">
+							</label>
+						</div>
+						
+						</form>
+					</div>
+				</div>
+
+				<div class="goods-content__sidebar">
+					<span class="goods-content__close">&times;</span>
+					<div class="goods-content__new">NEW</div>
+					<h1 class="goods-content__name">
+						THE <span class="goods-content__name--blue">RUNNING</span> <br> HAS JUST BEGUN
+					</h1>
+					<div class="goods-content__rating">
+						<span class="goods-content__rated-good-name">Huarache</span>
+					</div>
+					<div class="goods-content__price">
+						$ 200
+					</div>
+					<div class="goods-content__size">
+						<h5 class="goods-content__size-header">
+							Size
+						</h5>
+						<ul class="goods-content__size-list">
+							<li class="goods-content__size-list-item">
+								7
+							</li>
+							<li class="goods-content__size-list-item">
+								8
+							</li>
+							<li class="goods-content__size-list-item">
+								9
+							</li>
+							<li class="goods-content__size-list-item">
+								10
+							</li>
+							<li class="goods-content__size-list-item">
+								11
+							</li>
+						</ul>
+					</div>
+					<div class="goods-content__btn-cart btn">Add to cart</div>
+					<div class="goods-content__btn-wishlist btn">Wishlist</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<script>
+			(function(){
+			var collection = document.querySelectorAll('.goods__slide-item');
+			collection.forEach(function(item){
+				item.addEventListener('click', function(){
+					var el = this;
+				
+					collection.forEach(function(i){
+						i.classList.remove('active');
+					});
+					el.classList.add('active');
+				})
+			});
+		}());
+	</script>
+</body>
+</html>
